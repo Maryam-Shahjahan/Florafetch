@@ -1,0 +1,21 @@
+<% layout("/layouts/boilerplate.ejs")%>
+
+<h2>Cart</h2>
+
+<% if(!cart || cart.plants.length===0){ %>
+<h4>Your cart is empty.</h4>
+<% } else {%>
+    <div class="row">
+<% cart.plants.forEach((plant) =>{ %>
+    <div class="col-md-4 mb-3">
+<img src="<%=plant.image.url%>" class="card-img-top cart-image">
+
+<div class="card-body">
+    <h5><%=plant.title%></h5>
+    <h5><%=plant.price%></h5>
+</div>
+</div>
+
+<%})%>
+</div>
+<% }%>  

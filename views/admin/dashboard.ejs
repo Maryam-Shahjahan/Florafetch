@@ -1,0 +1,105 @@
+<% layout("/layouts/boilerplate.ejs") %>
+
+
+<div class="container mt-4">
+
+    <h2 class="mb-4">Admin Dashboard</h2>
+
+    <div class="row">
+
+        <!-- Users Count -->
+        <div class="col-md-4 mb-3">
+            <div class="card shadow">
+                <div class="card-body text-center">
+                    <h5 class="card-title">
+                        Total Users
+                    </h5>
+
+                    <h2>
+                        <%= users %>
+                    </h2>
+
+                    <a href="/plantings" class="btn btn-primary">
+                         Users
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Plants Count -->
+        <div class="col-md-4 mb-3">
+            <div class="card shadow">
+                <div class="card-body text-center">
+
+                    <h5 class="card-title">
+                        Total Plants
+                    </h5>
+
+                    <h2>
+                        <%= plants %>
+                    </h2>
+
+                    <a href="/plantings" class="btn btn-success">
+                         Plants
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Cart / Orders Count -->
+        <div class="col-md-4 mb-3">
+            <div class="card shadow">
+                <div class="card-body text-center">
+
+                    <h5 class="card-title">
+                        Total Carts
+                    </h5>
+
+                    <h2>
+                        <%= carts %>
+                    </h2>
+
+                    <a href="/plantings" class="btn btn-warning">
+                         Orders
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Admin Actions -->
+
+    <div class="card mt-4 shadow">
+        <div class="card-body">
+
+            <h4>
+                Admin Actions
+            </h4>
+
+            <hr>
+
+            <a href="/plantings/new" class="btn btn-outline-success">
+                Add New Plant
+            </a>
+
+
+            <a href="/plantings" class="btn btn-outline-primary">
+                View All Plants
+            </a>
+
+
+            <a href="/plantings" class="btn btn-outline-dark">
+                View Users
+            </a>
+
+        </div>
+    </div>
+
+
+</div>

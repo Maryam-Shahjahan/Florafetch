@@ -1,0 +1,24 @@
+<% layout("/layouts/boilerplate.ejs")%> 
+<body>
+    <h3>All Plantings</h3>
+<!-- <form method="GET" action="/plantings/new">
+    <button>Create new Planting</button>
+</form> -->
+
+<div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-1 row-cols-1 g-3">
+<% for(let plantings of allPlantings) { %>    
+    <a href="/plantings/<%=plantings._id%>" class="plantings-link">
+    <div class="card col planting-card">
+  <img src="<%=plantings.image.url%>" class="card-img-top" alt="Planting_image" style="height: 18rem;">
+  <div class="card-body">
+    <p class="card-text">
+       <b><%= plantings.title%> <br/></b>
+       <%= plantings.country%> <br/>
+       <%= plantings.location%> <br/> 
+  </div>
+</div>
+<% } %>
+</a>
+</div>
+</body>
+

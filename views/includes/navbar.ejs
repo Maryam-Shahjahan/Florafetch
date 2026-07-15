@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-md bg-light sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/plantings"><i class="fa-solid fa-seedling"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link"  href="/plantings">Home</a>
+        <a class="nav-link" href="/plantings/new">Add Plant</a>
+        <a class="nav-link" href="/cart">Cart<%=cartCount%></a>
+         
+               <% if(currentUser && currentUser.isAdmin){ %>
+
+<li class="nav-item">
+    <a class="nav-link" href="/admin-test">
+        Admin Dashboard
+    </a>
+</li>
+
+<% } %>
+
+      </div>
+
+
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link"  href="/signup">Sign Up</a>
+        <a class="nav-link" href="/login">Log in</a>
+        <a class="nav-link" href="/logout">Log Out</a>
+      </div>
+    </div>
+  </div>
+</nav>
