@@ -36,6 +36,9 @@ main().then(() =>{
 })
 async function main() {
     await mongoose.connect(dbUrl);
+
+
+    console.log("Connected database:", mongoose.connection.name);
 }
 
 app.set("view engine", "ejs");
@@ -72,11 +75,13 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 //admin middleware
-app.use((req,res,next)=>{
+app.use((req, res, next) => {
     res.locals.currentUser = req.user;
+
+    console.log("Current User:", req.user);
+
     next();
 });
-
 
 //cart middleware
 app.use(async (req,res,next)=>{
